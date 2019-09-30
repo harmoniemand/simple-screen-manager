@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  api:
+    build: ./ssm-server
+    ports:
+      - 5000:5000
+    volumes:
+      - ./ssm-server:/app
+      - ssm-server-data:/data
+
+volumes:
+  ssm-server-data:
